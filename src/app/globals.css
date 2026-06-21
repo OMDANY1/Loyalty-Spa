@@ -24,37 +24,41 @@
    ═══════════════════════════════════════════════════════════════════ */
 :root {
   /* Backgrounds */
-  --bg:              #faf7f2;
-  --bg-alt:          #f5efe6;
-  --bg-thread:       #f8f6f2;
-  --bg-thread-alt:   #f2ede6;
+  --bg:              #F8F6F2;
+  --bg-alt:          #F2EDE6;
+  --bg-thread:       #F8F6F2;
+  --bg-thread-alt:   #F2EDE6;
 
   /* Cards */
-  --card-glass-bg:    rgba(250, 247, 242, 0.65);
-  --card-glass-border: rgba(214, 176, 122, 0.2);
-  --card-glass-shadow: 0 4px 24px rgba(36, 52, 47, 0.08), inset 0 1px 0 rgba(214, 176, 122, 0.15);
+  --card:             rgba(252, 250, 247, 0.85);
+  --card-glass-bg:    rgba(252, 250, 247, 0.75);
+  --card-glass-border: rgba(201, 160, 99, 0.2);
+  --card-glass-shadow: 0 4px 24px rgba(36, 52, 47, 0.08), inset 0 1px 0 rgba(201, 160, 99, 0.15);
 
   /* Text */
-  --text-primary:    #24342f;
-  --text-muted:      rgba(36, 52, 47, 0.55);
-  --text-faint:      rgba(36, 52, 47, 0.30);
+  --text-primary:    #1F1F1F;
+  --text-muted:      #5C5850;
+  --text-faint:      rgba(31, 31, 31, 0.3);
 
   /* Brand */
-  --gold:            #d6b07a;
-  --gold-light:      #e5c99a;
-  --gold-dark:       #b8924e;
-  --sage:            #24342f;
-  --sage-dark:       #1a2820;
+  --gold:            #C9A063;
+  --gold-light:      #DFC08A;
+  --gold-dark:       #A8813E;
+  --sage:            #24342F;
+  --sage-dark:       #1A2820;
 
   /* Header */
-  --header-bg:       rgba(250, 247, 242, 0.88);
-  --header-border:   rgba(214, 176, 122, 0.2);
+  --header-bg:       rgba(248, 246, 242, 0.88);
+  --header-border:   rgba(201, 160, 99, 0.2);
   --header-h:        52px;
 
   /* Nav pill */
-  --pill-bg:         rgba(245, 239, 230, 0.85);
-  --pill-hover-bg:   rgba(214, 176, 122, 0.15);
-  --pill-color:      #24342f;
+  --pill-bg:         rgba(242, 237, 230, 0.85);
+  --pill-hover-bg:   rgba(201, 160, 99, 0.15);
+  --pill-color:      #1F1F1F;
+
+  /* Section borders */
+  --border:          rgba(201, 160, 99, 0.2);
 
   /* Section dark (sage sections — consistent in both themes) */
   --section-dark-bg: linear-gradient(160deg, #24342f 0%, #1a2820 100%);
@@ -63,27 +67,28 @@
 
 [data-theme="dark"] {
   /* Backgrounds */
-  --bg:              #0e1816;
-  --bg-alt:          #111f1c;
-  --bg-thread:       #0e1816;
-  --bg-thread-alt:   #111f1c;
+  --bg:              #0E1816;
+  --bg-alt:          #111F1C;
+  --bg-thread:       #0E1816;
+  --bg-thread-alt:   #111F1C;
 
   /* Cards */
-  --card-glass-bg:    rgba(22, 35, 32, 0.75);
-  --card-glass-border: rgba(214, 176, 122, 0.18);
-  --card-glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(214, 176, 122, 0.1);
+  --card:             #162320;
+  --card-glass-bg:    rgba(22, 35, 32, 0.85);
+  --card-glass-border: rgba(214, 176, 122, 0.25);
+  --card-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(214, 176, 122, 0.1);
 
   /* Text */
-  --text-primary:    #f8f6f2;
-  --text-muted:      #c8c4bc;
+  --text-primary:    #F8F6F2;
+  --text-muted:      #D8D4CC;
   --text-faint:      rgba(248, 246, 242, 0.35);
 
-  /* Brand — gold unchanged in dark mode */
-  --gold:            #d6b07a;
-  --gold-light:      #e5c99a;
-  --gold-dark:       #b8924e;
-  --sage:            #1a2820;
-  --sage-dark:       #0e1816;
+  /* Brand */
+  --gold:            #D6B07A;
+  --gold-light:      #E5C99A;
+  --gold-dark:       #B8924E;
+  --sage:            #1A2820;
+  --sage-dark:       #0E1816;
 
   /* Header */
   --header-bg:       rgba(14, 24, 22, 0.92);
@@ -92,7 +97,10 @@
   /* Nav pill */
   --pill-bg:         rgba(22, 35, 32, 0.9);
   --pill-hover-bg:   rgba(214, 176, 122, 0.12);
-  --pill-color:      #f8f6f2;
+  --pill-color:      #F8F6F2;
+
+  /* Section borders */
+  --border:          rgba(214, 176, 122, 0.25);
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -101,11 +109,11 @@
 *, *::before, *::after {
   box-sizing: border-box;
   transition:
-    background-color 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease,
-    opacity 0.2s ease;
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    opacity 200ms ease;
 }
 
 /* ═══════════════════════════════════════════════════════════════════

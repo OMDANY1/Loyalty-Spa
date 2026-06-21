@@ -5,7 +5,7 @@ import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
-import { CuppingIcon, HotStoneIcon, OilIcon, EarCandleIcon, WoodIcon, FaceMaskIcon, HerbBallIcon, LymphaticFacialIcon, KhalaaIcon, FootReflexologyIcon } from "./SpaIcons";
+import { CuppingIcon, HotStoneIcon, OilIcon, EarCandleIcon, WoodIcon, FaceMaskIcon, HerbBallIcon, LymphaticIcon, KhalaaIcon, FootReflexologyIcon } from "./SpaIcons";
 
 const container: Variants = {
   hidden: {},
@@ -28,7 +28,7 @@ export default function AdditionsSection() {
     { id: "wood",            label: t.additions.items.wood,            Icon: WoodIcon },
     { id: "faceMask",        label: t.additions.items.faceMask,        Icon: FaceMaskIcon },
     { id: "herbBall",        label: t.additions.items.herbBall,        Icon: HerbBallIcon },
-    { id: "lymphatic",       label: t.additions.items.lymphatic,       Icon: LymphaticFacialIcon },
+    { id: "lymphatic",       label: t.additions.items.lymphatic,       Icon: LymphaticIcon },
     { id: "khalaa",          label: t.additions.items.khalaa,          Icon: KhalaaIcon },
     { id: "footReflexology", label: t.additions.items.footReflexology, Icon: FootReflexologyIcon },
   ];
@@ -38,7 +38,7 @@ export default function AdditionsSection() {
       id="additions"
       className="relative py-20 px-4 overflow-hidden"
       aria-labelledby="additions-title"
-      style={{ background: "linear-gradient(160deg, #24342F 0%, #1A2820 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%)" }}
     >
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-10 blur-3xl"
@@ -46,7 +46,7 @@ export default function AdditionsSection() {
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <SectionTitle title={t.additions.title} subtitle={t.additions.subtitle} light />
+        <SectionTitle title={t.additions.title} subtitle={t.additions.subtitle} />
 
         {/* Price badges */}
         <Animate
@@ -59,9 +59,9 @@ export default function AdditionsSection() {
             { id: "one-addon", label: t.additions.oneAddon, price: "30" },
             { id: "two-addons", label: t.additions.twoAddons, price: "50" },
           ].map((badge) => (
-            <div key={badge.id} className="glass-card-dark rounded-2xl px-8 py-5 flex items-center justify-between gap-6 min-w-[220px]">
+            <div key={badge.id} className="glass-card rounded-2xl px-8 py-5 flex items-center justify-between gap-6 min-w-[220px]">
               <span className="ar-text font-medium"
-                style={{ fontSize: "clamp(0.9rem, 2.5vw, 1rem)", color: "rgba(250,247,242,0.85)" }}>
+                style={{ fontSize: "clamp(0.9rem, 2.5vw, 1rem)", color: "var(--text-primary)" }}>
                 {badge.label}
               </span>
               <div className="flex items-center gap-1.5">
@@ -83,10 +83,10 @@ export default function AdditionsSection() {
           className="max-w-2xl mx-auto mb-12 reveal-animate"
         >
           <div className="rounded-2xl px-6 py-4 text-center"
-            style={{ background: "rgba(214,176,122,0.1)", border: "1px solid rgba(214,176,122,0.3)" }}>
-            <span className="font-semibold" style={{ color: "#D6B07A" }}>{t.additions.note}</span>
-            <span className="ar-text" style={{ color: "rgba(250,247,242,0.75)", fontSize: "0.9rem" }}>
-              {t.additions.noteText}
+            style={{ background: "var(--card-glass-bg)", border: "1px solid var(--border)" }}>
+            <span className="font-semibold" style={{ color: "var(--gold)" }}>{t.additions.note}</span>
+            <span className="ar-text" style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
+              {" "}{t.additions.noteText}
             </span>
           </div>
         </Animate>
@@ -103,14 +103,14 @@ export default function AdditionsSection() {
               key={id}
               variants={reduced ? undefined : item}
               transition={{ delay: i * 0.06 }}
-              className="flex flex-col items-center justify-center gap-3.5 glass-card-dark rounded-2xl p-5 text-center cursor-default h-full min-h-[140px] hover-lift reveal-animate"
+              className="flex flex-col items-center justify-center gap-3.5 glass-card rounded-2xl p-5 text-center cursor-default h-full min-h-[140px] hover-lift reveal-animate"
             >
               <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                 style={{ background: "rgba(214,176,122,0.1)", border: "1px solid rgba(214,176,122,0.25)" }}>
                 <Icon size={26} />
               </div>
               <span className="ar-text font-medium text-xs leading-relaxed"
-                style={{ color: "rgba(250,247,242,0.85)", letterSpacing: 0 }}>
+                style={{ color: "var(--text-primary)", letterSpacing: 0 }}>
                 {label}
               </span>
             </Animate>

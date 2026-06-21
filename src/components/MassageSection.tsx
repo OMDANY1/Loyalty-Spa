@@ -5,7 +5,7 @@ import { useApp } from "@/contexts/AppContext";
 import PriceCard from "./PriceCard";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
-import { MassageIcon, SpaStoneIcon, LotusIcon, LymphaticFacialIcon } from "./SpaIcons";
+import { MassageIcon, SpaStoneIcon, LotusIcon, DeepFacialIcon } from "./SpaIcons";
 
 export default function MassageSection() {
   const { t } = useApp();
@@ -98,7 +98,7 @@ export default function MassageSection() {
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-7 md:p-9">
             <div className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0"
               style={{ background: "rgba(214,176,122,0.12)", border: "1.5px solid rgba(214,176,122,0.4)" }}>
-              <LymphaticFacialIcon size={40} />
+              <DeepFacialIcon size={40} />
             </div>
             <div className="flex-1 text-center md:text-right">
               <span className="inline-block text-xs font-medium px-3 py-1 rounded-full mb-3 ar-text"

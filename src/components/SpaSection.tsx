@@ -21,7 +21,7 @@ export default function SpaSection() {
       id="spa"
       className="relative py-20 px-4 overflow-hidden"
       aria-labelledby="spa-title"
-      style={{ background: "linear-gradient(160deg, #24342F 0%, #1E3028 50%, #24342F 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%)" }}
     >
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] rounded-full opacity-15 blur-3xl pointer-events-none"
         style={{ background: "radial-gradient(circle, #D6B07A 0%, transparent 70%)" }} aria-hidden="true" />
@@ -30,7 +30,7 @@ export default function SpaSection() {
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <SectionTitle title={t.spa.title} subtitle={t.spa.subtitle} light />
+        <SectionTitle title={t.spa.title} subtitle={t.spa.subtitle} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {spaServices.map(({ id, title, price, Icon, badge }, i) => (
@@ -39,7 +39,7 @@ export default function SpaSection() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-                className="relative glass-card-dark p-6 md:p-7 flex flex-col gap-4 cursor-default hover-lift reveal-animate h-full"
+                className="relative glass-card p-6 md:p-7 flex flex-col gap-4 cursor-default hover-lift reveal-animate h-full"
               >
                 <div className="absolute top-0 inset-x-0 h-px"
                   style={{ background: "linear-gradient(90deg, transparent, rgba(214,176,122,0.4), transparent)" }} />
@@ -59,7 +59,7 @@ export default function SpaSection() {
                 </div>
 
                 <h3 className="ar-text font-semibold"
-                  style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)", color: "#FAF7F2", letterSpacing: 0 }}>
+                  style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)", color: "var(--text-primary)", letterSpacing: 0 }}>
                   {title}
                 </h3>
 

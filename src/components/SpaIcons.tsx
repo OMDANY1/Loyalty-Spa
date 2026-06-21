@@ -437,27 +437,36 @@ export function InfinityIcon({ size = 32, color = GOLD, strokeWidth = 1.2, class
   );
 }
 
-/* ── Lymphatic Facial Massage — face oval with flowing lymph-drainage curves ── */
-export function LymphaticFacialIcon(p: IconProps) {
+/* ── Deep Facial Massage — elegant profile contour with upward lifting lines ── */
+export function DeepFacialIcon(p: IconProps) {
   return (
     <IconBase {...p}>
-      {/* Face oval */}
-      <ellipse cx="16" cy="14" rx="7.5" ry="9.5" />
-      {/* Lymph flow lines — sweeping outward from face */}
-      <path d="M8.5 10 C6 9 4 10 3 12" />
-      <path d="M8.5 14 C6 13.5 4 14 3 16" />
-      <path d="M8.5 18 C6 18 4 19 3 21" />
-      <path d="M23.5 10 C26 9 28 10 29 12" />
-      <path d="M23.5 14 C26 13.5 28 14 29 16" />
-      <path d="M23.5 18 C26 18 28 19 29 21" />
-      {/* Gentle smile */}
-      <path d="M13 18 C14 19.5 18 19.5 19 18" />
-      {/* Eyes — soft closed lashes */}
-      <path d="M12.5 11.5 C13.5 10.5 14.5 10.5 15.5 11.5" />
-      <path d="M16.5 11.5 C17.5 10.5 18.5 10.5 19.5 11.5" />
-      {/* Neck / décolletage continuation */}
-      <path d="M13 23.5 L13 27 M19 23.5 L19 27" opacity="0.5" />
-      <path d="M11 27 C12.5 26 19.5 26 21 27" opacity="0.5" />
+      {/* Elegant face profile contour */}
+      <path d="M10 26 C12 25, 14.5 23.5, 15.5 21.5 C16.8 19, 17.5 18, 17 16.5 C16.3 15, 18.5 14, 18.5 13 C18.5 12, 17.2 11, 17.8 9 C18.5 7, 16 5, 12 4" />
+      {/* Soft closed eye lashes */}
+      <path d="M12.5 11 C13.5 10, 14.5 10, 15.5 11" />
+      {/* Gentle lifting lines on the cheek area representing rejuvenation */}
+      <path d="M9 16 C12 13.5, 17 13.5, 21 16" opacity="0.85" />
+      <path d="M10 19.5 C14 16.5, 20 16.5, 24 19.5" opacity="0.85" />
+      <path d="M12 23 C16 20, 22 20, 26 23" opacity="0.6" />
+    </IconBase>
+  );
+}
+
+/* ── Lymphatic Massage — gentle flowing energy pathways and drainage waves ── */
+export function LymphaticIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Central flow path */}
+      <path d="M16 4 C16 4, 18 10, 16 16 C14 22, 16 28, 16 28" opacity="0.6" />
+      {/* Elegant winding lymphatic pathways / energy curves */}
+      <path d="M8 8 C11 10, 12 14, 10 18 C8 22, 11 25, 14 27" />
+      <path d="M24 8 C21 10, 20 14, 22 18 C24 22, 21 25, 18 27" />
+      {/* Soft detox ripples / flowing waves */}
+      <path d="M5 12 C10 14, 10 18, 5 20" opacity="0.5" />
+      <path d="M27 12 C22 14, 22 18, 27 20" opacity="0.5" />
+      {/* Energy center / node */}
+      <circle cx="16" cy="16" r="1.5" />
     </IconBase>
   );
 }

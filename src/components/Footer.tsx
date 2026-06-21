@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer
       className="relative py-16 px-4 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #1A2820 0%, #131D19 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%)" }}
     >
       {/* Gold top border */}
       <div className="absolute top-0 inset-x-0 h-px"
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         <p className="ar-text max-w-md"
-          style={{ fontSize: "clamp(0.85rem, 2vw, 0.95rem)", color: "rgba(250,247,242,0.5)", lineHeight: 1.9, letterSpacing: 0 }}>
+          style={{ fontSize: "clamp(0.85rem, 2vw, 0.95rem)", color: "var(--text-muted)", lineHeight: 1.9, letterSpacing: 0 }}>
           {t.footer.tagline1}
           <br />
           {t.footer.tagline2}
@@ -50,7 +50,7 @@ export default function Footer() {
           <SpaStoneIcon size={24} color="#D6B07A" strokeWidth={0.9} />
         </div>
 
-        <p className="ar-text" style={{ fontSize: "0.75rem", color: "rgba(250,247,242,0.28)", letterSpacing: 0 }}>
+        <p className="ar-text" style={{ fontSize: "0.75rem", color: "var(--text-faint)", letterSpacing: 0 }}>
           {t.footer.rights}
         </p>
       </div>
