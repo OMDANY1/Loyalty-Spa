@@ -3,16 +3,40 @@ import "./globals.css";
 import { AppProvider } from "@/contexts/AppContext";
 
 export const metadata: Metadata = {
-  title: "Loyalty Spa | سبا لويالتي — تجربة استرخاء استثنائية",
+  title: "Loyalty Spa | لويالتي سبا",
   description:
-    "خدمات المساج والعناية المتكاملة في أجواء فاخرة صُممت لراحتك. احجزي جلستك الآن في Loyalty Spa وانعمي بأرقى تجارب السبا.",
-  keywords: "سبا, مساج, حمام مغربي, عناية بالشعر, واكس, فاخر, loyalty spa",
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+    "لحظات من الهدوء... وتجربة استرخاء استثنائية",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
   openGraph: {
-    title: "Loyalty Spa | سبا لويالتي",
-    description: "لحظات من الهدوء... وتجربة استرخاء استثنائية",
-    type: "website",
+    title: "Loyalty Spa | لويالتي سبا",
+    description:
+      "لحظات من الهدوء... وتجربة استرخاء استثنائية",
+    url: "https://YOUR_DOMAIN",
+    siteName: "Loyalty Spa",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Loyalty Spa",
+      },
+    ],
     locale: "ar_SA",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Loyalty Spa | لويالتي سبا",
+    description:
+      "لحظات من الهدوء... وتجربة استرخاء استثنائية",
+    images: ["/og-image.jpg"],
   },
 };
 
