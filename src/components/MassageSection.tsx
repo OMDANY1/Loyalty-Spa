@@ -76,16 +76,15 @@ export default function MassageSection() {
           </div>
         </motion.div>
 
-        {/* Premium: Deep Facial Lift Massage */}
+      <div className="rounded-3xl overflow-hidden max-w-4xl mx-auto mt-4" style={{ boxShadow: "0 8px 40px rgba(214,176,122,0.18), 0 2px 12px rgba(0,0,0,0.3)" }}>
         <motion.div
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          className="relative rounded-3xl overflow-hidden cursor-default mt-4 max-w-4xl mx-auto hover-lift-gold reveal-animate"
+          className="relative cursor-default hover-lift-gold reveal-animate"
           style={{
             background: "linear-gradient(135deg, #24342F 0%, #1E3028 60%, #24342F 100%)",
             border: "1.5px solid rgba(214,176,122,0.45)",
-            boxShadow: "0 8px 40px rgba(214,176,122,0.18), 0 2px 12px rgba(0,0,0,0.3)",
           }}
         >
           <div className="absolute top-0 right-0 w-48 h-48 -translate-y-1/3 translate-x-1/3 rounded-full blur-3xl pointer-events-none"
@@ -124,6 +123,7 @@ export default function MassageSection() {
             </div>
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   );

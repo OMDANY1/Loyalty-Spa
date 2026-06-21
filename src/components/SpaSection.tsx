@@ -34,44 +34,45 @@ export default function SpaSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {spaServices.map(({ id, title, price, Icon, badge }, i) => (
-            <motion.div
-              key={id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-              className="relative glass-card-dark rounded-3xl p-6 md:p-7 flex flex-col gap-4 cursor-default overflow-hidden hover-lift reveal-animate"
-            >
-              <div className="absolute top-0 inset-x-0 h-px"
-                style={{ background: "linear-gradient(90deg, transparent, rgba(214,176,122,0.4), transparent)" }} />
+            <div key={id} className="rounded-3xl overflow-hidden">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+                className="relative glass-card-dark p-6 md:p-7 flex flex-col gap-4 cursor-default hover-lift reveal-animate h-full"
+              >
+                <div className="absolute top-0 inset-x-0 h-px"
+                  style={{ background: "linear-gradient(90deg, transparent, rgba(214,176,122,0.4), transparent)" }} />
 
-              {badge && (
-                <div className="flex">
-                  <span className="text-xs px-3 py-1 rounded-full font-medium ar-text"
-                    style={{ background: "rgba(214,176,122,0.18)", color: "#D6B07A", border: "1px solid rgba(214,176,122,0.3)", letterSpacing: 0 }}>
-                    {badge}
-                  </span>
+                {badge && (
+                  <div className="flex">
+                    <span className="text-xs px-3 py-1 rounded-full font-medium ar-text"
+                      style={{ background: "rgba(214,176,122,0.18)", color: "#D6B07A", border: "1px solid rgba(214,176,122,0.3)", letterSpacing: 0 }}>
+                      {badge}
+                    </span>
+                  </div>
+                )}
+
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(214,176,122,0.1)", border: "1px solid rgba(214,176,122,0.25)" }}>
+                  <Icon size={26} />
                 </div>
-              )}
 
-              <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ background: "rgba(214,176,122,0.1)", border: "1px solid rgba(214,176,122,0.25)" }}>
-                <Icon size={26} />
-              </div>
+                <h3 className="ar-text font-semibold"
+                  style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)", color: "#FAF7F2", letterSpacing: 0 }}>
+                  {title}
+                </h3>
 
-              <h3 className="ar-text font-semibold"
-                style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)", color: "#FAF7F2", letterSpacing: 0 }}>
-                {title}
-              </h3>
-
-              <div className="flex items-center gap-1.5 mt-auto pt-4"
-                style={{ borderTop: "1px solid rgba(214,176,122,0.15)" }}>
-                <span className="text-3xl font-bold tabular-nums"
-                  style={{ background: "linear-gradient(135deg, #D6B07A, #E5C99A)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                  {price}
-                </span>
-                <RiyalIcon size={20} />
-              </div>
-            </motion.div>
+                <div className="flex items-center gap-1.5 mt-auto pt-4"
+                  style={{ borderTop: "1px solid rgba(214,176,122,0.15)" }}>
+                  <span className="text-3xl font-bold tabular-nums"
+                    style={{ background: "linear-gradient(135deg, #D6B07A, #E5C99A)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                    {price}
+                  </span>
+                  <RiyalIcon size={20} />
+                </div>
+              </motion.div>
+            </div>
           ))}
         </div>
       </div>

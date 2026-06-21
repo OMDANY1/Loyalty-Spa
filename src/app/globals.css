@@ -508,6 +508,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
+   SAFARI DEBUG MODE TEST OVERRIDES (Toggled via URL ?test=a,b,c...)
+   ═══════════════════════════════════════════════════════════════════ */
+/* Test A: Disable blur & backdrop filters */
+.safari-test-a .glass-card,
+.safari-test-a .glass-card-dark {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Test B: Disable animations / transforms */
+.safari-test-b .reveal-animate {
+  transform: none !important;
+  animation: none !important;
+}
+
+/* Test C: Disable overflow clipping */
+.safari-test-c .glass-card,
+.safari-test-c .glass-card-dark,
+.safari-test-c [class*="rounded-3xl"],
+.safari-test-c [class*="rounded-2xl"],
+.safari-test-c div,
+.safari-test-c section {
+  overflow: visible !important;
+}
+
+/* Test D: Disable border radius */
+.safari-test-d .glass-card,
+.safari-test-d .glass-card-dark,
+.safari-test-d [class*="rounded-3xl"],
+.safari-test-d [class*="rounded-2xl"],
+.safari-test-d div,
+.safari-test-d section {
+  border-radius: 0 !important;
+}
+
+/* Test E: Disable sticky positioning */
+.safari-test-e #services-nav,
+.safari-test-e .sticky {
+  position: relative !important;
+  top: auto !important;
+}
+
+/* Test F: Disable box shadows and filters */
+.safari-test-f .glass-card,
+.safari-test-f .glass-card-dark,
+.safari-test-f .btn-primary,
+.safari-test-f .btn-outline {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
    REDUCE MOTION
    ═══════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {

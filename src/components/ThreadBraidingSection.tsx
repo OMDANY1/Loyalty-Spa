@@ -61,42 +61,46 @@ export default function ThreadBraidingSection() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map(({ id, title, price }) => (
-            <motion.div
+            <div
               key={id}
-              variants={reduced ? undefined : cardVariants}
-              className="relative rounded-3xl overflow-hidden flex flex-col items-center text-center gap-5 p-8 cursor-default hover-lift-bronze reveal-animate"
-              style={{
-                background: "var(--card-glass-bg)",
-                backdropFilter: "blur(14px)",
-                WebkitBackdropFilter: "blur(14px)",
-                border: "1px solid var(--card-glass-border)",
-                boxShadow: "var(--card-glass-shadow)",
-                minHeight: "260px",
-                justifyContent: "center",
-              }}
+              className="rounded-3xl overflow-hidden"
+              style={{ boxShadow: "var(--card-glass-shadow)" }}
             >
-              <div className="absolute top-0 inset-x-0 h-px"
-                style={{ background: "linear-gradient(90deg, transparent, rgba(201,160,99,0.5), transparent)" }} aria-hidden="true" />
+              <motion.div
+                variants={reduced ? undefined : cardVariants}
+                className="relative flex flex-col items-center text-center gap-5 p-8 cursor-default hover-lift-bronze reveal-animate h-full"
+                style={{
+                  background: "var(--card-glass-bg)",
+                  backdropFilter: "blur(14px)",
+                  WebkitBackdropFilter: "blur(14px)",
+                  border: "1px solid var(--card-glass-border)",
+                  minHeight: "260px",
+                  justifyContent: "center",
+                }}
+              >
+                <div className="absolute top-0 inset-x-0 h-px"
+                  style={{ background: "linear-gradient(90deg, transparent, rgba(201,160,99,0.5), transparent)" }} aria-hidden="true" />
 
-              <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ background: "rgba(201,160,99,0.08)", border: "1.5px solid rgba(201,160,99,0.28)" }}>
-                <ThreadBraidIcon size={32} color="var(--gold)" />
-              </div>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(201,160,99,0.08)", border: "1.5px solid rgba(201,160,99,0.28)" }}>
+                  <ThreadBraidIcon size={32} color="var(--gold)" />
+                </div>
 
-              <h3 className="ar-text font-semibold"
-                style={{ fontSize: "clamp(1rem, 2.8vw, 1.15rem)", color: "var(--text-primary)", letterSpacing: 0, lineHeight: 1.5 }}>
-                {title}
-              </h3>
+                <h3 className="ar-text font-semibold"
+                  style={{ fontSize: "clamp(1rem, 2.8vw, 1.15rem)", color: "var(--text-primary)", letterSpacing: 0, lineHeight: 1.5 }}>
+                  {title}
+                </h3>
 
-              <div className="flex items-center justify-center gap-2 pt-4 w-full"
-                style={{ borderTop: "1px solid rgba(201,160,99,0.18)" }}>
-                <span className="font-bold tabular-nums"
-                  style={{ fontSize: "clamp(2rem, 6vw, 2.8rem)", background: "linear-gradient(135deg, #C9A063 0%, #DFC08A 50%, #A8813E 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", letterSpacing: 0 }}>
-                  {price}
-                </span>
-                <RiyalIcon size={22} />
-              </div>
-            </motion.div>
+                <div className="flex items-center justify-center gap-2 pt-4 w-full"
+                  style={{ borderTop: "1px solid rgba(201,160,99,0.18)" }}>
+                  <span className="font-bold tabular-nums"
+                    style={{ fontSize: "clamp(2rem, 6vw, 2.8rem)", background: "linear-gradient(135deg, #C9A063 0%, #DFC08A 50%, #A8813E 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", letterSpacing: 0 }}>
+                    {price}
+                  </span>
+                  <RiyalIcon size={22} />
+                </div>
+              </motion.div>
+            </div>
           ))}
         </motion.div>
       </div>

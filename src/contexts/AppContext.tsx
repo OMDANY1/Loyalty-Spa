@@ -65,6 +65,27 @@ export function AppProvider({ children }: { children: ReactNode }) {
       document.documentElement.classList.add("is-safari");
     }
 
+    // URL Query Parameter Debugger for isolation tests
+    const params = new URLSearchParams(window.location.search);
+    const testParam = params.get("test");
+    if (testParam) {
+      if (testParam === "all") {
+        document.documentElement.classList.add(
+          "safari-test-a",
+          "safari-test-b",
+          "safari-test-c",
+          "safari-test-d",
+          "safari-test-e",
+          "safari-test-f"
+        );
+      } else {
+        const tests = testParam.split(",");
+        tests.forEach((t) => {
+          document.documentElement.classList.add(`safari-test-${t.trim().toLowerCase()}`);
+        });
+      }
+    }
+
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile, { passive: true });
