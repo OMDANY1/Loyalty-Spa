@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 
 export default function ServicesNav() {
@@ -86,7 +86,7 @@ export default function ServicesNav() {
         </div>
       </div>
 
-      <motion.div
+      <Animate
         className="h-px"
         style={{ background: "linear-gradient(90deg, transparent, rgba(214,176,122,0.3), transparent)" }}
         initial={{ scaleX: 0 }}

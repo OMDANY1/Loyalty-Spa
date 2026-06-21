@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
@@ -40,7 +40,7 @@ export default function WaxSection() {
               className={`rounded-2xl overflow-hidden ${service.featured ? "col-span-2 sm:col-span-3 lg:col-span-4" : ""}`}
               style={service.featured ? { boxShadow: "0 12px 48px rgba(214,176,122,0.25)" } : undefined}
             >
-              <motion.div
+              <Animate
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -77,7 +77,7 @@ export default function WaxSection() {
                   </span>
                   <RiyalIcon size={service.featured ? 24 : 16} />
                 </div>
-              </motion.div>
+              </Animate>
             </div>
           ))}
         </div>

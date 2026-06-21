@@ -18,6 +18,7 @@ interface AppContextType {
   setLang: (l: Lang) => void;
   toggleTheme: () => void;
   isMobile: boolean;
+  isSafari: boolean;
 }
 
 // ─── Context ──────────────────────────────────────────────────────────────────
@@ -46,6 +47,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("ar");
   const [theme, setThemeState] = useState<"light" | "dark">("light");
   const [isMobile, setIsMobile] = useState(false);
+  const [isSafari, setIsSafari] = useState(false);
   // Track the current theme in a ref so callbacks always have fresh value
   const themeRef = useRef<"light" | "dark">("light");
 
@@ -61,6 +63,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
     // Safari detection to add target rendering overrides
     const isSafariUA = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    setIsSafari(isSafariUA);
     if (isSafariUA) {
       document.documentElement.classList.add("is-safari");
     }
@@ -116,6 +119,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setLang,
         toggleTheme,
         isMobile,
+        isSafari,
       }}
     >
       {children}

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
@@ -10,7 +10,7 @@ function TreatmentCard({
 }: { title: string; subtitle?: string; price: string; Icon: React.ComponentType<{ size?: number }>; index: number }) {
   return (
     <div className="rounded-3xl overflow-hidden" style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.2)" }}>
-      <motion.div
+      <Animate
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -40,7 +40,7 @@ function TreatmentCard({
           </span>
           <RiyalIcon size={24} />
         </div>
-      </motion.div>
+      </Animate>
     </div>
   );
 }
@@ -75,7 +75,7 @@ export default function HairTreatmentsSection() {
 
           {/* Collagen — full width tiered */}
           <div className="md:col-span-2 rounded-3xl overflow-hidden" style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.2)" }}>
-            <motion.div
+            <Animate
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -83,7 +83,7 @@ export default function HairTreatmentsSection() {
               style={{ background: "rgba(250,247,242,0.06)", border: "1px solid rgba(214,176,122,0.3)" }}
             >
               <div className="absolute top-0 inset-x-0 h-px"
-                style={{ background: "linear-gradient(90deg, transparent, rgba(214,176,122,0.6), transparent)" }} />
+                style={{ background: "linear-gradient(90deg, transparent, rgba(214,176,122,0.6), transparent)" }} aria-hidden="true" />
               <div className="p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
@@ -103,7 +103,7 @@ export default function HairTreatmentsSection() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {collagenTiers.map((tier, i) => (
-                    <motion.div
+                    <Animate
                       key={tier.id}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -121,11 +121,11 @@ export default function HairTreatmentsSection() {
                         </span>
                         <RiyalIcon size={18} />
                       </div>
-                    </motion.div>
+                    </Animate>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </Animate>
           </div>
         </div>
       </div>

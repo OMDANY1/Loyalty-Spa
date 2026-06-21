@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
@@ -22,7 +22,7 @@ export default function MoroccanBathSection() {
       <div className="max-w-4xl mx-auto">
         <SectionTitle title={t.moroccan.title} subtitle={t.moroccan.subtitle} />
 
-        <motion.div
+        <Animate
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -88,7 +88,7 @@ export default function MoroccanBathSection() {
               <RiyalIcon size={36} />
             </div>
           </div>
-        </motion.div>
+        </Animate>
       </div>
     </section>
   );

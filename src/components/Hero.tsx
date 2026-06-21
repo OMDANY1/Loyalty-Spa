@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import { InfinityIcon, SpaStoneIcon } from "./SpaIcons";
 
@@ -43,19 +43,20 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-5 max-w-3xl mx-auto w-full">
         {/* Logo */}
-        <motion.div
+        <Animate
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          className="mb-10"
+          className="mb-10 reveal-animate"
         >
           <div className="relative mx-auto" style={{ width: 220, height: 220 }}>
             <Image src="/logo.png" alt="Loyalty Spa — سبا لويالتي" fill priority className="object-contain" />
           </div>
-        </motion.div>
+        </Animate>
 
         {/* Headline */}
-        <motion.h1
+        <Animate
+          tag="h1"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -72,10 +73,11 @@ export default function Hero() {
           }}>
             {t.hero.title2}
           </span>
-        </motion.h1>
+        </Animate>
 
         {/* Subtitle */}
-        <motion.p
+        <Animate
+          tag="p"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -83,10 +85,10 @@ export default function Hero() {
           style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.15rem)", color: "rgba(250,247,242,0.7)", lineHeight: 1.8, letterSpacing: 0 }}
         >
           {t.hero.subtitle}
-        </motion.p>
+        </Animate>
 
         {/* CTAs */}
-        <motion.div
+        <Animate
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -101,24 +103,24 @@ export default function Hero() {
           <button onClick={scrollToServices} id="hero-cta-services" className="btn-outline">
             <span className="ar-text">{t.hero.viewServices}</span>
           </button>
-        </motion.div>
+        </Animate>
 
         {/* Scroll indicator */}
-        <motion.div
+        <Animate
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="mt-16 flex flex-col items-center gap-2"
+          className="mt-16 flex flex-col items-center gap-2 reveal-animate"
         >
-          <motion.div
+          <Animate
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
             className="w-6 h-10 rounded-full flex items-start justify-center p-1"
             style={{ border: "2px solid rgba(214,176,122,0.4)" }}
           >
             <div className="w-1 h-2 rounded-full" style={{ background: "#D6B07A" }} />
-          </motion.div>
-        </motion.div>
+          </Animate>
+        </Animate>
       </div>
     </section>
   );

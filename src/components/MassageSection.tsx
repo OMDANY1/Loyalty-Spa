@@ -1,5 +1,6 @@
 "use client";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import PriceCard from "./PriceCard";
 import SectionTitle from "./SectionTitle";
@@ -41,7 +42,7 @@ export default function MassageSection() {
         </div>
 
         {/* Scalp massage */}
-        <motion.div
+        <Animate
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -74,10 +75,10 @@ export default function MassageSection() {
               <RiyalIcon size={24} />
             </div>
           </div>
-        </motion.div>
+        </Animate>
 
       <div className="rounded-3xl overflow-hidden max-w-4xl mx-auto mt-4" style={{ boxShadow: "0 8px 40px rgba(214,176,122,0.18), 0 2px 12px rgba(0,0,0,0.3)" }}>
-        <motion.div
+        <Animate
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -122,7 +123,7 @@ export default function MassageSection() {
               <RiyalIcon size={26} />
             </div>
           </div>
-        </motion.div>
+        </Animate>
       </div>
       </div>
     </section>

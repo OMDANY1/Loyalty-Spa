@@ -1,6 +1,7 @@
 "use client";
 import type { Variants } from "framer-motion";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
@@ -45,29 +46,30 @@ export default function ThreadBraidingSection() {
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <motion.div
+        <Animate
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           className="reveal-animate"
         >
           <SectionTitle title={t.threadBraiding.title} subtitle={t.threadBraiding.subtitle} />
-        </motion.div>
+        </Animate>
 
-        <motion.div
+        <Animate
           variants={reduced ? undefined : containerVariants}
           initial="hidden"
           animate="show"
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map(({ id, title, price }) => (
+          {services.map(({ id, title, price }, i) => (
             <div
               key={id}
               className="rounded-3xl overflow-hidden"
               style={{ boxShadow: "var(--card-glass-shadow)" }}
             >
-              <motion.div
+              <Animate
                 variants={reduced ? undefined : cardVariants}
+                transition={{ delay: i * 0.06 }}
                 className="relative flex flex-col items-center text-center gap-5 p-8 cursor-default hover-lift-bronze reveal-animate h-full"
                 style={{
                   background: "var(--card-glass-bg)",
@@ -99,10 +101,10 @@ export default function ThreadBraidingSection() {
                   </span>
                   <RiyalIcon size={22} />
                 </div>
-              </motion.div>
+              </Animate>
             </div>
           ))}
-        </motion.div>
+        </Animate>
       </div>
 
       <div className="absolute bottom-0 inset-x-0 h-px"

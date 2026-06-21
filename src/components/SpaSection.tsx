@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
@@ -35,7 +35,7 @@ export default function SpaSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {spaServices.map(({ id, title, price, Icon, badge }, i) => (
             <div key={id} className="rounded-3xl overflow-hidden">
-              <motion.div
+              <Animate
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -71,7 +71,7 @@ export default function SpaSection() {
                   </span>
                   <RiyalIcon size={20} />
                 </div>
-              </motion.div>
+              </Animate>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 import type { Variants } from "framer-motion";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
@@ -48,7 +49,7 @@ export default function AdditionsSection() {
         <SectionTitle title={t.additions.title} subtitle={t.additions.subtitle} light />
 
         {/* Price badges */}
-        <motion.div
+        <Animate
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -72,10 +73,10 @@ export default function AdditionsSection() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </Animate>
 
         {/* Note */}
-        <motion.div
+        <Animate
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -88,19 +89,20 @@ export default function AdditionsSection() {
               {t.additions.noteText}
             </span>
           </div>
-        </motion.div>
+        </Animate>
 
         {/* 10-item grid */}
-        <motion.div
+        <Animate
           variants={reduced ? undefined : container}
           initial="hidden"
           animate="show"
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
         >
-          {additions.map(({ id, label, Icon }) => (
-            <motion.div
+          {additions.map(({ id, label, Icon }, i) => (
+            <Animate
               key={id}
               variants={reduced ? undefined : item}
+              transition={{ delay: i * 0.06 }}
               className="flex flex-col items-center justify-center gap-3.5 glass-card-dark rounded-2xl p-5 text-center cursor-default h-full min-h-[140px] hover-lift reveal-animate"
             >
               <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
@@ -111,9 +113,9 @@ export default function AdditionsSection() {
                 style={{ color: "rgba(250,247,242,0.85)", letterSpacing: 0 }}>
                 {label}
               </span>
-            </motion.div>
+            </Animate>
           ))}
-        </motion.div>
+        </Animate>
       </div>
     </section>
   );

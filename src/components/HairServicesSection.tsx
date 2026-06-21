@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import PriceCard from "./PriceCard";
 import SectionTitle from "./SectionTitle";
@@ -59,7 +59,7 @@ export default function HairServicesSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-2xl mx-auto">
             {braidingServices.map((service, i) => (
-              <motion.div
+              <Animate
                 key={service.id}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function HairServicesSection() {
                   </span>
                   <RiyalIcon size={18} />
                 </div>
-              </motion.div>
+              </Animate>
             ))}
           </div>
         </div>

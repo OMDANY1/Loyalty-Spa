@@ -483,8 +483,22 @@ h1, h2, h3, h4, h5, h6 {
 /* ═══════════════════════════════════════════════════════════════════
    SAFARI RENDERING BUG OVERRIDES & FALLBACKS
    ═══════════════════════════════════════════════════════════════════ */
-.is-safari .reveal-animate {
-  transform: none !important;
+.fade-up {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  -webkit-transform: translate3d(0, 12px, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: paint;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
 }
 
 .is-safari .hover-lift,
@@ -518,9 +532,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Test B: Disable animations / transforms */
-.safari-test-b .reveal-animate {
+.safari-test-b .reveal-animate,
+.safari-test-b .fade-up {
   transform: none !important;
+  -webkit-transform: none !important;
   animation: none !important;
+  opacity: 1 !important;
 }
 
 /* Test C: Disable overflow clipping */

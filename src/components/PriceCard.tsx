@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import Animate from "./Animate";
 import RiyalIcon from "./RiyalIcon";
 
 interface PriceCardProps {
@@ -28,7 +28,7 @@ export default function PriceCard({
             }
       }
     >
-      <motion.div
+      <Animate
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -117,7 +117,7 @@ export default function PriceCard({
           </span>
           <RiyalIcon size={22} />
         </div>
-      </motion.div>
+      </Animate>
     </div>
   );
 }
