@@ -30,6 +30,11 @@ function applyToDOM(l: Lang, th: "light" | "dark", fade = false) {
   html.setAttribute("dir", translations[l].dir);
   html.setAttribute("lang", l);
   html.setAttribute("data-theme", th);
+  if (th === "dark") {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
   
   if (fade) {
     // Brief fade on language switch for smooth visual transition
@@ -107,7 +112,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setThemeState(next);
     localStorage.setItem("theme", next);
     // Apply new theme, keep current lang
-    document.documentElement.setAttribute("data-theme", next);
+    const html = document.documentElement;
+    html.setAttribute("data-theme", next);
+    if (next === "dark") {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
   }, []);
 
   return (

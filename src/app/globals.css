@@ -60,6 +60,9 @@
   /* Section borders */
   --border:          rgba(201, 160, 99, 0.2);
 
+  /* Safari opaque card fallback bg */
+  --card-glass-safari-bg: rgba(250, 247, 242, 0.96);
+
   /* Section dark (sage sections — consistent in both themes) */
   --section-dark-bg: linear-gradient(160deg, #24342f 0%, #1a2820 100%);
   --hero-bg:         linear-gradient(160deg, #1a2820 0%, #24342f 40%, #2e4238 70%, #1a2820 100%);
@@ -101,6 +104,9 @@
 
   /* Section borders */
   --border:          rgba(214, 176, 122, 0.25);
+
+  /* Safari opaque card fallback bg */
+  --card-glass-safari-bg: rgba(22, 35, 32, 0.98);
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -520,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
 .is-safari .glass-card {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  background: rgba(250, 247, 242, 0.96) !important;
+  background: var(--card-glass-safari-bg) !important;
 }
 
 .is-safari .glass-card-dark {
