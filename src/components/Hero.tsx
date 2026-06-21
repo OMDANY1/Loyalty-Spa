@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
-import { InfinityIcon, SpaStoneIcon } from "./SpaIcons";
+import { InfinityIcon, SpaStoneIcon, WhatsAppIcon } from "./SpaIcons";
 
 export default function Hero() {
   const { t } = useApp();
@@ -94,12 +94,16 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center reveal-animate"
         >
-          <button onClick={scrollToBooking} id="hero-cta-book" className="btn-primary">
+          <a
+            href="https://wa.link/ufu6rv"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="hero-cta-book"
+            className="btn-primary"
+          >
             <span className="ar-text">{t.hero.bookNow}</span>
-            <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
+            <WhatsAppIcon size={20} />
+          </a>
           <button onClick={scrollToServices} id="hero-cta-services" className="btn-outline">
             <span className="ar-text">{t.hero.viewServices}</span>
           </button>
