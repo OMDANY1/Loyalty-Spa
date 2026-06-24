@@ -544,3 +544,92 @@ export function WhatsAppIcon(p: IconProps) {
     </IconBase>
   );
 }
+
+/* ── Steamer — steam nozzle and vapor ── */
+export function SteamerIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Device stand/nozzle base */}
+      <path d="M12 24 L20 24 L22 30 L10 30 Z" />
+      <path d="M16 24 L16 18" />
+      {/* Mist head */}
+      <path d="M14 18 C14 18 16 16 18 18" />
+      {/* Vapor particles */}
+      <path d="M20 14 C22 13 22 10 24 9" opacity="0.6" />
+      <path d="M22 16 C25 15 25 12 28 11" opacity="0.4" />
+      <path d="M18 12 C19 10 18 8 20 7" opacity="0.8" />
+    </IconBase>
+  );
+}
+
+/* ── Peeling — spatula scrub and glow ── */
+export function PeelingIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Skin layer line */}
+      <path d="M6 22 C12 25 20 25 26 22" />
+      {/* Exfoliation spatula */}
+      <path d="M11 12 L19 6 L23 10 L15 16 Z" />
+      <path d="M13 14 L11 12" />
+      {/* Sparkling skin glow */}
+      <path d="M8 16 L8 18" opacity="0.6" />
+      <path d="M16 20 L16 22" opacity="0.8" />
+      <path d="M22 14 L24 16 L22 18 L20 16 Z" />
+    </IconBase>
+  );
+}
+
+/* ── Facial Lifting Roller ── */
+export function LiftingIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Y-roller handle */}
+      <path d="M16 30 L16 20" />
+      <path d="M16 20 C14 18 10 16 10 12 L10 8" />
+      <path d="M16 20 C18 18 22 16 22 12 L22 8" />
+      {/* Massage globes */}
+      <ellipse cx="10" cy="8" rx="3" ry="2" />
+      <ellipse cx="22" cy="8" rx="3" ry="2" />
+      {/* Lift waves */}
+      <path d="M6 14 C6 14 10 10 16 10 C22 10 26 14 26 14" opacity="0.5" />
+      <path d="M12 5 L16 1 L20 5" />
+    </IconBase>
+  );
+}
+
+/* ── Suction device — extraction nozzle ── */
+export function SuctionIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Skin plane */}
+      <path d="M4 26 C12 28 20 28 28 26" />
+      {/* Suction applicator tip */}
+      <path d="M13 18 L19 18 L18 24 L14 24 Z" />
+      {/* Device body handle */}
+      <path d="M13 18 L16 6 L19 18" />
+      {/* Vacuum extraction indicators */}
+      <path d="M16 22 C16 22 16 25 16 25" />
+      <circle cx="12" cy="22" r="1.5" opacity="0.6" />
+      <circle cx="20" cy="23" r="1" opacity="0.6" />
+    </IconBase>
+  );
+}
+
+/* ── Cavitation device / contour line-art ── */
+export function CavitationIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Elegant waistline silhouette */}
+      <path d="M8 4 C11 12 11 20 8 28" />
+      <path d="M24 4 C21 12 21 20 24 28" />
+      {/* Cavitation ultrasonic soundwaves */}
+      <path d="M12 10 C14 11 18 11 20 10" strokeDasharray="2 2" opacity="0.5" />
+      <path d="M11 14 C14 15 18 15 21 14" />
+      <path d="M11 18 C14 19 18 19 21 18" />
+      <path d="M12 22 C14 23 18 23 20 22" strokeDasharray="2 2" opacity="0.5" />
+      {/* Ultrasonic probe applicator */}
+      <path d="M16 5 L16 11" />
+      <path d="M13 5 L19 5" />
+    </IconBase>
+  );
+}

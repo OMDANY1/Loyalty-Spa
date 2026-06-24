@@ -8,6 +8,7 @@ import ServicesNav from "@/components/ServicesNav";
 import Hero from "@/components/Hero";
 import MassageSection from "@/components/MassageSection";
 import AdditionsSection from "@/components/AdditionsSection";
+import FacialCleansingSection from "@/components/FacialCleansingSection";
 import MoroccanBathSection from "@/components/MoroccanBathSection";
 import HairServicesSection from "@/components/HairServicesSection";
 import ThreadBraidingSection from "@/components/ThreadBraidingSection";
@@ -31,6 +32,7 @@ export default function Home() {
         <ServicesNav />
         <MassageSection />
         <AdditionsSection />
+        <FacialCleansingSection />
         <MoroccanBathSection />
         <HairServicesSection />
         <ThreadBraidingSection />

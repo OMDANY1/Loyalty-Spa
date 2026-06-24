@@ -11,14 +11,15 @@ export default function ServicesNav() {
 
   // Build tabs from translations
   const TABS = [
-    { id: "massage",         label: t.nav.massage },
-    { id: "additions",       label: t.nav.additions },
-    { id: "moroccan",        label: t.nav.moroccan },
-    { id: "hair",            label: t.nav.hair },
-    { id: "thread-braiding", label: t.nav.threadBraiding },
-    { id: "spa",             label: t.nav.spa },
-    { id: "wax",             label: t.nav.wax },
-    { id: "treatments",      label: t.nav.treatments },
+    { id: "massage",          label: t.nav.massage },
+    { id: "additions",        label: t.nav.additions },
+    { id: "facial-cleansing", label: t.nav.facialCleansing },
+    { id: "moroccan",         label: t.nav.moroccan },
+    { id: "hair",             label: t.nav.hair },
+    { id: "thread-braiding",  label: t.nav.threadBraiding },
+    { id: "spa",              label: t.nav.spa },
+    { id: "wax",              label: t.nav.wax },
+    { id: "treatments",       label: t.nav.treatments },
   ];
 
   useEffect(() => {
