@@ -9,9 +9,9 @@ export default function SpaSection() {
   const { t } = useApp();
 
   const spaServices = [
-    { id: "manicure",  title: t.spa.manicure,  price: "90",  Icon: NailPolishIcon },
-    { id: "pedicure",  title: t.spa.pedicure,  price: "90",  Icon: SpaHandIcon },
-    { id: "maniPedi",  title: t.spa.maniPedi,  price: "150", Icon: SpaHandIcon, badge: t.spa.bestValue },
+    { id: "manicure",  title: t.spa.manicure,  price: "120",  Icon: NailPolishIcon },
+    { id: "pedicure",  title: t.spa.pedicure,  price: "120",  Icon: SpaHandIcon },
+    { id: "maniPedi",  title: t.spa.maniPedi,  price: "220", Icon: SpaHandIcon, badge: t.spa.bestValue },
     { id: "handColor", title: t.spa.handColor, price: "40",  Icon: NailPolishIcon },
     { id: "footColor", title: t.spa.footColor, price: "40",  Icon: NailPolishIcon },
   ];

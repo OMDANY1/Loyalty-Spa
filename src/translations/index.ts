@@ -11,6 +11,7 @@ export const translations = {
     nav: {
       massage: "المساج",
       additions: "الإضافات",
+      cavitation: "جهاز الكافيتيشن",
       facialCleansing: "خدمة تنظيف البشرة",
       moroccan: "الحمام المغربي",
       hair: "الشعر",
@@ -74,8 +75,12 @@ export const translations = {
       faceMask: "قناع للوجه",
       deviceSuction: "جهاز سحب الدهون والرؤوس السوداء والبيضاء",
       note: "تشمل الخدمة كريمات مرطبة ومفتحة للبشرة وفيتامينات مخصصة للوجه",
-      cavitationTitle: "جهاز الكافيتيشن لتفتيت الدهون",
-      cavitationDesc: "يساعد على تفتيت الدهون الموضعية ونحت الجسم وتحسين مظهر الجلد بشكل آمن وفعال.",
+    },
+    cavitation: {
+      title: "جهاز الكافيتيشن لتفتيت الدهون",
+      subtitle: "نحت الجسم وتفتيت الدهون",
+      cardTitle: "جهاز الكافيتيشن لتفتيت الدهون",
+      cardDesc: "يساعد على تفتيت الدهون الموضعية ونحت الجسم وتحسين مظهر الجلد بشكل آمن وفعال.",
       sessionPrice: "سعر الجلسة",
     },
     moroccan: {
@@ -157,6 +162,7 @@ export const translations = {
     nav: {
       massage: "Massage",
       additions: "Add-ons",
+      cavitation: "Cavitation",
       facialCleansing: "Facial Cleansing",
       moroccan: "Moroccan Bath",
       hair: "Hair",
@@ -221,8 +227,12 @@ export const translations = {
       faceMask: "Face mask",
       deviceSuction: "Sebum & blackhead suction device",
       note: "The service includes moisturizing & brightening creams and vitamins tailored for the face",
-      cavitationTitle: "Cavitation Fat Blasting Device",
-      cavitationDesc: "Helps break down localized fat, sculpt the body, and improve skin appearance safely and effectively.",
+    },
+    cavitation: {
+      title: "Cavitation Fat Reduction",
+      subtitle: "Body sculpting & localized fat reduction",
+      cardTitle: "Cavitation Fat Reduction Device",
+      cardDesc: "Helps break down localized fat, sculpt the body, and improve skin appearance safely and effectively.",
       sessionPrice: "Session Price",
     },
     moroccan: {

@@ -13,6 +13,7 @@ export default function ServicesNav() {
   const TABS = [
     { id: "massage",          label: t.nav.massage },
     { id: "additions",        label: t.nav.additions },
+    { id: "cavitation",       label: t.nav.cavitation },
     { id: "facial-cleansing", label: t.nav.facialCleansing },
     { id: "moroccan",         label: t.nav.moroccan },
     { id: "hair",             label: t.nav.hair },
