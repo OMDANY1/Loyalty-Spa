@@ -74,6 +74,19 @@ export default function MassageSection() {
               </span>
               <RiyalIcon size={24} />
             </div>
+            {t.massage.scalpSecondaryDesc && (
+              <div className="mx-auto max-w-[280px] md:max-w-[340px]" style={{ marginTop: "18px" }}>
+                <p className="ar-text font-medium text-center"
+                  style={{
+                    fontSize: "0.85rem",
+                    color: "var(--text-muted)",
+                    lineHeight: 1.6,
+                    letterSpacing: 0
+                  }}>
+                  {t.massage.scalpSecondaryDesc}
+                </p>
+              </div>
+            )}
           </div>
         </Animate>
 
