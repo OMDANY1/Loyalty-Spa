@@ -4,7 +4,7 @@ import RiyalIcon from "./RiyalIcon";
 
 interface PriceCardProps {
   title: string;
-  price: string | number;
+  price?: string | number;
   description?: string;
   badge?: string;
   featured?: boolean;
@@ -99,24 +99,26 @@ export default function PriceCard({
           </div>
         </div>
 
-        <div
-          className="flex items-center gap-2 mt-auto pt-4"
-          style={{ borderTop: "1px solid rgba(214,176,122,0.2)" }}
-        >
-          <span
-            className="text-3xl md:text-4xl font-bold tabular-nums"
-            style={{
-              background: "linear-gradient(135deg, #D6B07A 0%, #E5C99A 50%, #B8924E 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              letterSpacing: 0,
-            }}
+        {price && (
+          <div
+            className="flex items-center gap-2 mt-auto pt-4"
+            style={{ borderTop: "1px solid rgba(214,176,122,0.2)" }}
           >
-            {price}
-          </span>
-          <RiyalIcon size={22} />
-        </div>
+            <span
+              className="text-3xl md:text-4xl font-bold tabular-nums"
+              style={{
+                background: "linear-gradient(135deg, #D6B07A 0%, #E5C99A 50%, #B8924E 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                letterSpacing: 0,
+              }}
+            >
+              {price}
+            </span>
+            <RiyalIcon size={22} />
+          </div>
+        )}
       </Animate>
     </div>
   );

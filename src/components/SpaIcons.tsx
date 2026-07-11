@@ -633,3 +633,24 @@ export function CavitationIcon(p: IconProps) {
     </IconBase>
   );
 }
+
+/* ── Ampoule Stem Cell / Hair Growth ── */
+export function AmpouleStemCellIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Scalp line */}
+      <path d="M6 25 C12 23 20 23 26 25" />
+      {/* Hair strand */}
+      <path d="M16 25 C17 20 15 14 18 9" />
+      {/* Concentrated active molecules (stem cell) */}
+      <circle cx="16" cy="17" r="2.5" opacity="0.75" />
+      <circle cx="12" cy="14" r="1" opacity="0.5" />
+      <circle cx="21" cy="18" r="1.5" opacity="0.6" />
+      {/* Ampoule dropper hovering */}
+      <path d="M25 6 L22 9" />
+      <path d="M21 7 L24 4" />
+      {/* Droplet */}
+      <path d="M19 12 C19 12 18.2 13 19 13.8 C19.8 14.6 20.8 13.8 20.8 13.8 C20.8 13.8 19 12 19 12Z" />
+    </IconBase>
+  );
+}

@@ -5,7 +5,7 @@ import { useApp } from "@/contexts/AppContext";
 import PriceCard from "./PriceCard";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
-import { MassageIcon, SpaStoneIcon, LotusIcon, DeepFacialIcon } from "./SpaIcons";
+import { MassageIcon, SpaStoneIcon, LotusIcon, DeepFacialIcon, AmpouleStemCellIcon } from "./SpaIcons";
 
 export default function MassageSection() {
   const { t } = useApp();
@@ -15,6 +15,8 @@ export default function MassageSection() {
     { id: "oneHour",     title: t.massage.oneHour,     price: "270", description: t.massage.oneHourDesc,     icon: <MassageIcon size={32} /> },
     { id: "oneHalfHour", title: t.massage.oneHalfHour, price: "350", description: t.massage.oneHalfHourDesc, badge: t.massage.mostPopular, featured: true, icon: <MassageIcon size={32} /> },
     { id: "twoHours",    title: t.massage.twoHours,    price: "430", description: t.massage.twoHoursDesc,    icon: <MassageIcon size={32} /> },
+    { id: "scalpNatural", title: t.massage.scalpTitle,   price: "80",  description: t.massage.scalpDesc,        icon: <LotusIcon size={32} /> },
+    { id: "scalpAmpoule", title: t.massage.scalpAmpouleTitle, icon: <AmpouleStemCellIcon size={32} /> },
   ];
 
   return (
@@ -40,55 +42,6 @@ export default function MassageSection() {
             <PriceCard key={service.id} {...service} index={i} />
           ))}
         </div>
-
-        {/* Scalp massage */}
-        <Animate
-          initial={reduced ? false : { opacity: 0, y: 10 }}
-          animate={reduced ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          className="max-w-lg mx-auto mb-12 hover-lift reveal-animate"
-        >
-          <div
-            className="rounded-3xl p-6 md:p-8 text-center relative overflow-hidden"
-            style={{ background: "var(--card-glass-bg)", backdropFilter: "blur(16px)", border: "1px solid var(--card-glass-border)" }}
-          >
-            <div className="absolute top-0 inset-x-0 h-px"
-              style={{ background: "linear-gradient(90deg, transparent, var(--gold), transparent)" }} />
-            <div className="flex justify-center mb-4">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center"
-                style={{ background: "rgba(214,176,122,0.1)", border: "1px solid rgba(214,176,122,0.3)" }}>
-                <LotusIcon size={30} />
-              </div>
-            </div>
-            <h3 className="ar-text font-bold mb-2"
-              style={{ fontSize: "clamp(1rem, 3vw, 1.2rem)", color: "var(--text-primary)", letterSpacing: 0 }}>
-              {t.massage.scalpTitle}
-            </h3>
-            <p className="ar-text mb-4" style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
-              {t.massage.scalpDesc}
-            </p>
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-4xl font-bold tabular-nums"
-                style={{ background: "linear-gradient(135deg, #D6B07A, #E5C99A, #B8924E)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                80
-              </span>
-              <RiyalIcon size={24} />
-            </div>
-            {t.massage.scalpSecondaryDesc && (
-              <div className="mx-auto max-w-[280px] md:max-w-[340px]" style={{ marginTop: "18px" }}>
-                <p className="ar-text font-medium text-center"
-                  style={{
-                    fontSize: "0.85rem",
-                    color: "var(--text-muted)",
-                    lineHeight: 1.6,
-                    letterSpacing: 0
-                  }}>
-                  {t.massage.scalpSecondaryDesc}
-                </p>
-              </div>
-            )}
-          </div>
-        </Animate>
 
       <div className="rounded-3xl overflow-hidden max-w-4xl mx-auto mt-4" style={{ boxShadow: "0 8px 40px rgba(214,176,122,0.18), 0 2px 12px rgba(0,0,0,0.3)" }}>
         <Animate

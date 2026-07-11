@@ -40,7 +40,7 @@ export const translations = {
       twoHoursDesc: "الجلسة الملكية الكاملة لأقصى درجات الاسترخاء",
       scalpTitle: "مساج فروة الرأس بالزيوت الطبيعية",
       scalpDesc: "علاج مغذٍّ يُحفّز الدورة الدموية ويُقوّي جذور الشعر",
-      scalpSecondaryDesc: "مساج فروة الرأس بأمبولات تطويل الشعر المركزة بتقنية الخلايا الجذعية",
+      scalpAmpouleTitle: "مساج فروة الرأس بأمبولات تطويل الشعر المركزة بتقنية الخلايا الجذعية",
       facialTitle: "مساج شد الوجه العميق",
       facialDesc:
         "تقنية متخصصة لتحفيز الجهاز الليمفاوي وشد ملامح الوجه بأسلوب علاجي فاخر",
@@ -193,8 +193,8 @@ export const translations = {
       scalpTitle: "Scalp Massage with Natural Oils",
       scalpDesc:
         "A nourishing treatment that stimulates blood circulation and strengthens hair roots",
-      scalpSecondaryDesc:
-        "Scalp massage with concentrated hair growth ampoules using stem cell technology",
+      scalpAmpouleTitle:
+        "Scalp Massage with Concentrated Hair Growth Ampoules Using Stem Cell Technology",
       facialTitle: "Deep Facial Lift Massage",
       facialDesc:
         "A specialized technique to stimulate the lymphatic system and sculpt facial contours in a luxurious therapeutic style",
