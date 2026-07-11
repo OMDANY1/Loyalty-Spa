@@ -16,7 +16,7 @@ export default function MassageSection() {
     { id: "oneHalfHour", title: t.massage.oneHalfHour, price: "350", description: t.massage.oneHalfHourDesc, badge: t.massage.mostPopular, featured: true, icon: <MassageIcon size={32} /> },
     { id: "twoHours",    title: t.massage.twoHours,    price: "430", description: t.massage.twoHoursDesc,    icon: <MassageIcon size={32} /> },
     { id: "scalpNatural", title: t.massage.scalpTitle,   price: "80",  description: t.massage.scalpDesc,        icon: <LotusIcon size={32} /> },
-    { id: "scalpAmpoule", title: t.massage.scalpAmpouleTitle, icon: <AmpouleStemCellIcon size={32} /> },
+    { id: "scalpAmpoule", title: t.massage.scalpAmpouleTitle, price: "80", icon: <AmpouleStemCellIcon size={32} /> },
   ];
 
   return (
