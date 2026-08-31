@@ -65,6 +65,7 @@ export const translations = {
         lymphatic: "المساج الليمفاوي",
         khalaa: "مساج الخلعة",
         footReflexology: "مساج الأقدام (رفلكسولوجي)",
+        footBath: "مغطس الماء الدافئ للأقدام بالأعشاب",
       },
     },
     facialCleansing: {
@@ -83,6 +84,7 @@ export const translations = {
       cardTitle: "جهاز الكافيتيشن لتفتيت الدهون",
       cardDesc: "يساعد على تفتيت الدهون الموضعية ونحت الجسم وتحسين مظهر الجلد بشكل آمن وفعال.",
       sessionPrice: "سعر الجلسة",
+      duration: "60 دقيقة",
     },
     moroccan: {
       title: "الحمام المغربي",
@@ -219,6 +221,7 @@ export const translations = {
         lymphatic: "Lymphatic Massage",
         khalaa: "Khalaa Massage",
         footReflexology: "Foot Massage (Reflexology)",
+        footBath: "Warm herbal foot bath",
       },
     },
     facialCleansing: {
@@ -237,6 +240,7 @@ export const translations = {
       cardTitle: "Cavitation Fat Reduction Device",
       cardDesc: "Helps break down localized fat, sculpt the body, and improve skin appearance safely and effectively.",
       sessionPrice: "Session Price",
+      duration: "60 minutes",
     },
     moroccan: {
       title: "Moroccan Bath",

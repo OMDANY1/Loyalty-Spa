@@ -5,7 +5,7 @@ import Animate from "./Animate";
 import { useApp } from "@/contexts/AppContext";
 import SectionTitle from "./SectionTitle";
 import RiyalIcon from "./RiyalIcon";
-import { CuppingIcon, HotStoneIcon, OilIcon, EarCandleIcon, WoodIcon, FaceMaskIcon, HerbBallIcon, LymphaticIcon, KhalaaIcon, FootReflexologyIcon } from "./SpaIcons";
+import { CuppingIcon, HotStoneIcon, OilIcon, EarCandleIcon, WoodIcon, FaceMaskIcon, HerbBallIcon, LymphaticIcon, KhalaaIcon, FootReflexologyIcon, FootBathIcon } from "./SpaIcons";
 
 const container: Variants = {
   hidden: {},
@@ -31,6 +31,7 @@ export default function AdditionsSection() {
     { id: "lymphatic",       label: t.additions.items.lymphatic,       Icon: LymphaticIcon },
     { id: "khalaa",          label: t.additions.items.khalaa,          Icon: KhalaaIcon },
     { id: "footReflexology", label: t.additions.items.footReflexology, Icon: FootReflexologyIcon },
+    { id: "footBath",        label: t.additions.items.footBath,        Icon: FootBathIcon },
   ];
 
   return (

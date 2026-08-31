@@ -50,7 +50,7 @@ export default function CavitationSection() {
               <div className="flex-1 text-center md:text-right">
                 <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ar-text"
                   style={{ background: "rgba(214,176,122,0.15)", color: "var(--gold)", border: "1px solid rgba(214,176,122,0.25)", letterSpacing: 0 }}>
-                  ✦ {t.cavitation.sessionPrice}
+                  ✦ {t.cavitation.duration}
                 </span>
                 <h3 className="ar-text font-bold"
                   style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", color: "var(--text-primary)", letterSpacing: 0, lineHeight: 1.5 }}>

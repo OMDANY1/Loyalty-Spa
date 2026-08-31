@@ -515,6 +515,22 @@ export function FootReflexologyIcon(p: IconProps) {
   );
 }
 
+/* ── Foot Bath / Herbal Foot Bath ── */
+export function FootBathIcon(p: IconProps) {
+  return (
+    <IconBase {...p}>
+      {/* Foot outline */}
+      <path d="M16 27 C13 27 11 25 11 21 C11 18 12.5 16 13 14 C13.5 12 13 10 14 7 C14.5 5.5 16 5 17 5 C18.5 5 19 7.5 19.5 9.5 C20 11.5 21 13 21 16 C21 21 19 27 16 27Z" />
+      {/* Toes */}
+      <circle cx="14.5" cy="2" r="1.2" />
+      <circle cx="17.5" cy="2.3" r="1" />
+      <circle cx="20" cy="3.2" r="0.8" />
+      <circle cx="22" cy="4.5" r="0.7" />
+      <circle cx="23.5" cy="6.2" r="0.6" />
+    </IconBase>
+  );
+}
+
 /* ── Khalaa Massage — core/abdomen soothing spiral of release ── */
 export function KhalaaIcon(p: IconProps) {
   return (
