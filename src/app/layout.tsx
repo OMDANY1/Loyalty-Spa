@@ -1,14 +1,49 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { AppProvider } from "@/contexts/AppContext";
 
+const PRODUCTION_URL = "https://loyalty-spa-hkv5.vercel.app";
+
+function getBaseUrl(): string {
+  const envUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ||
+    process.env.VERCEL_URL;
+
+  if (!envUrl) {
+    return PRODUCTION_URL;
+  }
+
+  const trimmed = envUrl.trim();
+  if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) {
+    return trimmed;
+  }
+
+  return `https://${trimmed}`;
+}
+
+export const viewport: Viewport = {
+  themeColor: "#24342F",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(getBaseUrl()),
+
   title: "Loyalty Spa | لويالتي سبا",
   description:
-    "لحظات من الهدوء... وتجربة استرخاء استثنائية",
+    "لحظات من الهدوء... وتجربة استرخاء استثنائية - خدمات المساج والعناية المتكاملة في أجواء فاخرة صُممت لراحتك.",
+
+  alternates: {
+    canonical: "/",
+  },
 
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo.png", type: "image/png" },
+    ],
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
@@ -16,27 +51,28 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Loyalty Spa | لويالتي سبا",
     description:
-      "لحظات من الهدوء... وتجربة استرخاء استثنائية",
-    url: "https://YOUR_DOMAIN",
+      "لحظات من الهدوء... وتجربة استرخاء استثنائية - خدمات المساج والعناية المتكاملة في أجواء فاخرة صُممت لراحتك.",
+    url: "/",
     siteName: "Loyalty Spa",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1080,
-        height: 1080,
-        alt: "Loyalty Spa",
-      },
-    ],
     locale: "ar_SA",
     type: "website",
+    images: [
+      {
+        url: "/preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Loyalty Spa | لويالتي سبا",
+        type: "image/jpeg",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Loyalty Spa | لويالتي سبا",
     description:
-      "لحظات من الهدوء... وتجربة استرخاء استثنائية",
-    images: ["/og-image.png"],
+      "لحظات من الهدوء... وتجربة استرخاء استثنائية - خدمات المساج والعناية المتكاملة في أجواء فاخرة صُممت لراحتك.",
+    images: ["/preview.jpg"],
   },
 };
 
@@ -78,15 +114,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#24342F" />
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <meta property="og:image" content="https://YOUR_DOMAIN/og-image.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1080" />
-        <meta property="og:image:height" content="1080" />
-        <meta name="twitter:image" content="https://YOUR_DOMAIN/og-image.png" />
       </head>
       <body className="antialiased">
         <AppProvider>{children}</AppProvider>
