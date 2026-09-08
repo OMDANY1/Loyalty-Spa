@@ -66,6 +66,8 @@ export const translations = {
         khalaa: "مساج الخلعة",
         footReflexology: "مساج الأقدام (رفلكسولوجي)",
         footBath: "مغطس الماء الدافئ للأقدام بالأعشاب",
+        fatReduction: "تفتيت الدهون",
+        facialMassage: "مساج الوجه",
       },
     },
     facialCleansing: {
@@ -222,6 +224,8 @@ export const translations = {
         khalaa: "Khalaa Massage",
         footReflexology: "Foot Massage (Reflexology)",
         footBath: "Warm herbal foot bath",
+        fatReduction: "Fat Reduction",
+        facialMassage: "Facial Massage",
       },
     },
     facialCleansing: {

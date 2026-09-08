@@ -670,3 +670,14 @@ export function AmpouleStemCellIcon(p: IconProps) {
     </IconBase>
   );
 }
+
+/* ── Fat Reduction ── */
+export function FatReductionIcon(p: IconProps) {
+  return <CavitationIcon {...p} />;
+}
+
+/* ── Facial Massage ── */
+export function FacialMassageIcon(p: IconProps) {
+  return <FaceLiftIcon {...p} />;
+}
+
